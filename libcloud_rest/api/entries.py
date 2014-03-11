@@ -460,7 +460,7 @@ class CloudStackAddressEntry(LibcloudObjectEntry):
 
 
 class CloudStackForwardingRuleEntry(LibcloudObjectEntry):
-    object_class = compute_cloudstack.CloudStackForwardingRule
+    object_class = compute_cloudstack.CloudStackIPForwardingRule
     render_attrs = ('node', 'id', 'address', 'protocol',
                     'start_port', 'end_port')
 
