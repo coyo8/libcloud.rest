@@ -2,7 +2,7 @@
 import os
 import sys
 
-from setuptools import setup
+from setuptools import setup, find_packages
 from setuptools import Command
 from setuptools.command.install import install as _install
 from subprocess import call
@@ -140,10 +140,7 @@ class install(_install):
 setup(
     name='libcloud_rest',
     version='0.0.1',
-    packages=[
-        'libcloud_rest',
-        'libcloud_rest.api',
-    ],
+    packages=find_packages(),
     package_dir={'libcloud_rest': 'libcloud_rest'},
     install_requires=[
         'werkzeug==0.8.3',
